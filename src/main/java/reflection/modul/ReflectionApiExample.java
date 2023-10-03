@@ -6,7 +6,8 @@ import java.lang.reflect.*;
 
 public class ReflectionApiExample {
     public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        User user = new User(25L, "Ivanov");
+        User user = new User(25L, "Ivanov", 24);
+        testMethods(user);
 //
 //        Class<? extends User> userClass = user.getClass();
 //        Class<User> userClass1 = User.class;
@@ -14,7 +15,6 @@ public class ReflectionApiExample {
 
         testConstructor();
 //        testFields(user);
-        testMethods(user);
     }
 
     private static void testConstructor() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
