@@ -38,6 +38,7 @@ public class CarRanner {
                     try {
                         return method.invoke(car);
                     } catch (IllegalAccessException | InvocationTargetException e) {
+                        e.printStackTrace();
                       throw new RuntimeException(e);
                     }
                 })
